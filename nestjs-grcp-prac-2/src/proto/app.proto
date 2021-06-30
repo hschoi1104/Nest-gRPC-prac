@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package app;
+
+service AppController {
+  rpc sum (NumberArray) returns (SumOfNumberArray);
+}
+
+message NumberArray {
+    repeated double data = 1;
+}
+
+message SumOfNumberArray {
+    double sum = 1;
+}
+
+
